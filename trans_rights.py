@@ -28,7 +28,7 @@ for trans in range(5):
 			x1 = x2
 			x2 = a
 			print(x1, x2)
-		for x in range(x1, x2):
+		for x in range(x1, x2 + 501):
 			y = amp * math.sin(1/math.pi * (x - x1)) + baseline
 			y = round(y) + trans
 			print(x, y, z1)
@@ -41,7 +41,7 @@ for trans in range(5):
 			z1 = z2
 			z2 = a
 			print(z1, z2)
-		for z in range(z1, z2):
+		for z in range(z1, z2 + 501):
 			y = amp * math.sin(1/math.pi * (z - z1)) + baseline
 			y = round(y) + trans
 			print(x1, y, z)
