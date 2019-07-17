@@ -21,24 +21,21 @@ print(amp)
 
 
 if(z1 == z2):
+	inc = 1
 	if(x1 > x2):
-		a = x1
-		x1 = x2
-		x2 = a
-		print(x1, x2)
-	for x in range(x1, x2):
+		inc = -1
+	for x in range(x1, x2, inc):
 		y = amp * math.sin(1/math.pi * (x - x1)) + baseline
 		y = round(y)
 		print(x, y, z1)
 		a, b, c = coords.mcToPy(x, y, z1)
 		mc.setBlock(a, b, c, block.STAINED_GLASS_PURPLE)
 if(x1 == x2):
+	inc = 1
 	if(z1 > z2):
-		a = z1
-		z1 = z2
-		z2 = a
+		inc = -1
 		print(z1, z2)
-	for z in range(z1, z2):
+	for z in range(z1, z2, inc):
 		y = amp * math.sin(1/math.pi * (z - z1)) + baseline
 		y = round(y)
 		print(x1, y, z)
